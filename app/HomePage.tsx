@@ -35,14 +35,16 @@ export default function HomePage() {
     { id: 'contact', label: 'Contact' }
   ];
 
-  const scrollToSection = (id) => {
-    setActiveSection(id);
-    setIsMenuOpen(false);
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+ const scrollToSection = (id: string) => {
+  setActiveSection(id);
+  setIsMenuOpen(false);
+
+  const element = document.getElementById(id);
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth' });
+  }
+};
+
 
   const handleBooking = () => {
     const message = `Hello! I'd like to book a table:\nName: ${bookingData.name}\nEmail: ${bookingData.email}\nPhone: ${bookingData.phone}\nDate: ${bookingData.date}\nTime: ${bookingData.time}\nGuests: ${bookingData.guests}`;
