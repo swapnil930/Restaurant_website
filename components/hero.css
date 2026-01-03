@@ -1,0 +1,69 @@
+.hero {
+  background-color: #32312d;
+}
+
+.middle {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  height: 50px;
+  background-color: #f5a30b;
+  border-radius: 40px;
+  padding: 0 16px;
+}
+
+.google,
+.rating {
+  font-family: "Newsreader", serif;
+}
+
+.star {
+  display: flex;
+  gap: 3px;
+  color: #ffcd04;
+}
+
+/* 🔥 Bottom content fonts */
+.bottom {
+  font-family: "42dot Sans", serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+.bottom h3 {
+  font-size: clamp(24px, 4vw, 39px);
+  font-weight: 900;
+}
+
+.bottom p {
+  font-family: "Sour Gummy", serif;
+  font-size: clamp(16px, 2.5vw, 23px);
+}
+
+/* 🎯 Button */
+.bottom button {
+  width: clamp(200px, 20vw, 200px);
+  height: clamp(35px, 6vw, 40px);
+  font-size: clamp(14px, 2vw, 18px);
+  font-weight: 600;
+  color: white;
+  background-color: black;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+/* ✨ Shake animation */
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-3px) rotate(-2deg); }
+  50% { transform: translateX(3px) rotate(2deg); }
+  75% { transform: translateX(-3px) rotate(-2deg); }
+  100% { transform: translateX(0); }
+}
+
+.bottom button:hover {
+  animation: shake 0.3s ease-in-out;
+  background-color: #af601a;
+}
